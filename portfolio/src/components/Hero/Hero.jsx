@@ -1,38 +1,57 @@
 import "./Hero.css";
 
 function Hero() {
-    
+
     return (
+
         <section className="hero">
 
-            <h1 className="hero-title">
-                Ramzi Chejjar
-            </h1>
+            <div className="hero-content">
 
-            <p className="hero-subtitle">
-                Software Engineering Student
-            </p>
+                <h1 className="hero-title">
+                    Ramzi Chejjar
+                </h1>
 
-            <div className="hero-socials">
-                <a href="#">
-                    GitHub
-                </a>
+                <div className="hero-line"></div>
 
-                <a href="#">
-                    Linkedin 
-                </a>
+                <p className="hero-subtitle">
+                    Software Engineering Student
+                </p>
+
+                <div className="hero-socials">
+
+                    <a href="#">
+                        GitHub
+                    </a>
+
+                    <a href="#">
+                        Linkedin
+                    </a>
+
+                </div>
 
                 <div className="hero-navigation">
 
-                    <button>About Me</button>
+                    <a href="#about">
+                        About Me
+                    </a>
 
-                    <button>Projects</button>
+                    <a href="#projects">
+                        Projects
+                    </a>
 
-                    <button>Contact</button>
+                    <a href="#contact">
+                        Contact
+                    </a>
+
+
 
                 </div>
+
             </div>
+
         </section>
+
     );
 
 }
