@@ -1,3 +1,4 @@
+import About from "./components/About/About";
 import Hero from "./components/Hero/Hero";
 
 function App() {
@@ -5,6 +6,7 @@ function App() {
   return (
     <>
     <Hero />
+    <About />
     </>
   );
 
