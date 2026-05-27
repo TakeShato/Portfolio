@@ -6,9 +6,25 @@ function About() {
 
         <section id="about" className="about">
 
-            <h2>
-                About Me
-            </h2>
+            <div className="about-content">
+
+                <p className="about-tag">
+                    ABOUT ME
+                </p>
+
+                <h2 className="about-title">
+                    Building creative 
+                    digital experiences.
+                </h2>
+
+                <p className="about-description">
+                    I'm a software engineering student passionate
+                    about frontend development and creating interfaces
+                    that feel meaninful and interactive.
+                </p>
+
+            </div>
+            
         </section>
     )
 }

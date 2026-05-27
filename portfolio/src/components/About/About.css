@@ -1,0 +1,48 @@
+.about {
+    min-height: 100vh;
+
+    background: #050505;
+
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 6rem 2rem;
+}
+
+.about-content {
+    max-width: 900px;
+}
+
+.about-tag {
+    color: #d62828;
+    letter-spacing: 4px;
+    font-size: 0.8rem;
+
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.about-title {
+    font-size: clamp(3rem, 7vw, 6rem);
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 2rem;
+
+    text-transform: uppercase;
+}
+
+.about-description {
+    color: #9d9d9d;
+
+    line-height: 1.8;
+
+    font-size: 1.1rem;
+
+    max-width: 600px;
+}
