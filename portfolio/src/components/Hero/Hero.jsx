@@ -10,8 +10,28 @@ function Hero() {
             </h1>
 
             <p className="hero-subtitle">
-                Sofrware Engineering Student
+                Software Engineering Student
             </p>
+
+            <div className="hero-socials">
+                <a href="#">
+                    GitHub
+                </a>
+
+                <a href="#">
+                    Linkedin 
+                </a>
+
+                <div className="hero-navigation">
+
+                    <button>About Me</button>
+
+                    <button>Projects</button>
+
+                    <button>Contact</button>
+
+                </div>
+            </div>
         </section>
     );
 
