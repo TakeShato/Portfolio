@@ -1,0 +1,147 @@
+.projects {
+    min-height: 100vh;
+
+    background: #bebdbb;
+
+    padding: 6rem 2rem;
+}
+
+.projects-grid {
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 2rem;
+}
+
+.projects-panel {
+    background: #c7c7c7;
+
+    border: 6px solid black;
+    
+    min-height: 300px;
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.3s ease;
+
+    cursor: pointer;
+}
+
+.panel-1 {
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        90% 100%,
+        0 100%
+    );
+
+    transform: rotate(-1deg);
+
+}
+
+.panel-2 {
+    clip-path: polygon(
+        10% 0,
+        100% 0,
+        100% 100%,
+        0 100%
+    
+    );
+
+    background-image: linear-gradient(
+        rgba(0,0,0,0.2),
+        rgba(0,0,0,0.2)
+    ),
+    url("../../assets/images/webshop.png");
+
+    background-size: cover;
+
+    background-position: center top;
+
+
+    transform: rotate(1deg);
+}
+
+.panel-3 {
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 100%,
+        10% 100%
+    );
+
+    background-image: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url("../../assets/images/code.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+
+    transform: rotate(1deg);
+}
+
+.panel-4 {
+    clip-path: polygon(
+        0 0,
+        90% 0,
+        100% 100%,
+        0 100%
+    );
+
+    transform: rotate(-1deg);
+
+    background-image: linear-gradient(
+        rgba(0,0,0,0.45),
+        rgba(0,0,0,0.45)
+    ),
+    url("../../assets/images/elections.png");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.projects-panel:hover {
+    transform: scale(1.02) rotate(0deg);
+
+    filter: brightness(1.05);
+
+    border-color: #f8f8f8;
+}
+
+.projects-panel h3 {
+    font-size: 2.5rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 4px;
+
+    text-align: center;
+
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+    z-index: 2;
+
+    position: relative;
+
+    color: white;
+}
+
+.project-panel {
+    transition: 
+    transform 0.4s ease,
+    filter 0.4s ease;
+}
