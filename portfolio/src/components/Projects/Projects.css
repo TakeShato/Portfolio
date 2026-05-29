@@ -4,8 +4,61 @@
     background: #bebdbb;
 
     padding: 6rem 2rem;
+
+    position: relative;
+
+    overflow: hidden;
 }
 
+.projects::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image: linear-gradient(
+        rgba(5, 5, 5, 0.75),
+        rgba(5, 5, 5, 0.85)
+    ),
+    url("../../assets/images/backgroundgoat.avif");
+
+    background-size: cover;
+    background-position: center;
+
+     filter: blur(2px);
+
+    transform: scale(1.1);
+
+    opacity: 0.35;
+
+    z-index: 0;
+
+    pointer-events: none;
+
+
+}
+
+.projects::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image: 
+    radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+
+    background-size: 4px 4px;
+
+    opacity: 1;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    pointer-events: none;
+}
 .projects-grid {
     max-width: 1400px;
 
@@ -16,6 +69,10 @@
     grid-template-columns: repeat(2, 1fr);
 
     gap: 2rem;
+
+    position: relative;
+
+    z-index: 2;
 }
 
 .projects-panel {
@@ -34,6 +91,10 @@
     transition: 0.3s ease;
 
     cursor: pointer;
+
+    text-decoration: none;
+
+    color: inherit;
 }
 
 .panel-1 {
