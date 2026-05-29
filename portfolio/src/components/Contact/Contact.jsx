@@ -14,11 +14,11 @@ function Contact() {
 
             <div className="contact-links">
 
-                <a href="#">
+                <a href="https://www.linkedin.com/in/ramzi-chejjar-a76278337/">
                     LinkedIn
                 </a>
 
-                <a href="#">
+                <a href="https://github.com/TakeShato">
                     GitHub
                 </a>
 

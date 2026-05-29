@@ -20,11 +20,11 @@ function Hero() {
 
                 <div className="hero-socials">
 
-                    <a href="#">
+                    <a href="https://github.com/TakeShato">
                         GitHub
                     </a>
 
-                    <a href="#">
+                    <a href="https://www.linkedin.com/in/ramzi-chejjar-a76278337/">
                         Linkedin
                     </a>
 
