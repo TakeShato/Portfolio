@@ -1,0 +1,81 @@
+.contact {
+    min-height: 100vh;
+
+    background: #050505;
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 6rem 2rem;
+}
+
+.contact h2 {
+    color: white;
+
+    font-size: clamp(4rem, 10vw, 9rem);
+
+    text-transform: uppercase;
+
+    letter-spacing: -5px;
+
+    line-height: 0.9;
+
+    margin-bottom: 2rem;
+}
+
+.contact p {
+    color: white;
+    max-width: 700px;
+
+    font-size: 1.4rem;
+
+    line-height: 1.8;
+
+    color: #9d9d9d;
+
+    margin-bottom: 5rem;
+}
+
+.contact-links {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 1.5rem;
+}
+
+.contact-links a {
+    text-decoration: none;
+
+    color: white;
+
+    border: 1px solid #333;
+
+    padding: 1rem 2rem;
+
+    border-radius: 999px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s ease;
+}
+
+.contact-links a:hover {
+    transform: translateY(-4px);
+
+    border-color: #d62828;
+
+    color: #d62828;
+}
