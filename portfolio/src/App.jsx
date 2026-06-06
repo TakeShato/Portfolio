@@ -10,6 +10,7 @@ import Elections from "./pages/Elections";
 import { AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import Contact from "./components/Contact/Contact";
+import BodyTracker from "./pages/BodyTracker";
 
 function Home() {
   
@@ -49,6 +50,11 @@ function AnimatedRoutes() {
       <Routes location={location} key={location.pathname}>
 
         <Route path="/" element={<Home />} />
+
+        <Route 
+          path="/bodytracker"
+          element={<BodyTracker />}
+          />
 
         <Route
           path="/gamewebshop"

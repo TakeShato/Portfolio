@@ -9,9 +9,9 @@ function Projects() {
 
             <div className="projects-grid">
 
-                <div className="projects-panel panel-1">
-                    <h3>AI tracker</h3>
-                </div>
+                <Link to="/bodytracker" className="projects-panel panel-1">
+                    <h3>Body Tracker</h3>
+                </Link>
 
                 <Link to="/gamewebshop" className="projects-panel panel-2">
                     <h3>Game Webshop</h3>
