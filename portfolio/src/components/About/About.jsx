@@ -28,7 +28,7 @@ function About() {
                 {/* Left — text block */}
                 <div className="about-left">
 
-                    <div className="about-chapter-label">CHAPTER 02 — ORIGIN</div>
+                    <div className="about-chapter-label">CHAPTER 01 — ORIGIN</div>
 
                     <p className="about-tag">About Me</p>
 

@@ -27,7 +27,7 @@ function Hero() {
 
                 {/* Chapter label */}
                 <div className="chapter-label">
-                    <span>CHAPTER 01</span>
+                    <span>CHAPTER 00</span>
                 </div>
 
                 <h1 className="hero-title">
