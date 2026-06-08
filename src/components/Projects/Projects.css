@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Oswald:wght@700&family=Share+Tech+Mono&display=swap');
+
+/* ─── Section ───────────────────────────────────────────────── */
+.projects {
+    min-height: 100vh;
+    background: #f5f0e8;
+    padding: 5rem 2rem 6rem;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Background — desaturated image */
+.projects::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../../assets/images/backgroundgoat.avif");
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%) contrast(1.4) brightness(1.2);
+    opacity: 0.06;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Halftone bg texture */
+.projects::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(10,10,10,0.09) 1px, transparent 1px);
+    background-size: 14px 14px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* ─── Header ────────────────────────────────────────────────── */
+.projects-header {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 1400px;
+    margin: 0 auto 3.5rem;
+    padding: 0 0.5rem;
+}
+
+.projects-tag {
+    background: #0a0a0a;
+    color: #f5f0e8;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 6px;
+    padding: 0.25rem 1rem;
+    margin-bottom: 0.6rem;
+    clip-path: polygon(0 0, 100% 0, 96% 100%, 0 100%);
+}
+
+.projects-heading {
+    font-family: 'Bangers', cursive;
+    font-size: clamp(4rem, 10vw, 8rem);
+    letter-spacing: 10px;
+    color: #0a0a0a;
+    line-height: 0.9;
+    text-shadow: 5px 5px 0 #d62828, 6px 6px 0 #0a0a0a;
+    margin: 0;
+}
+
+.projects-rule {
+    width: 100%;
+    height: 4px;
+    background: #0a0a0a;
+    margin-top: 1.2rem;
+    position: relative;
+}
+
+.projects-rule::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 6px;
+    width: 60%;
+    height: 2px;
+    background: #d62828;
+}
+
+/* ─── Grid ──────────────────────────────────────────────────── */
+.projects-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    position: relative;
+    z-index: 2;
+
+    /* Thick outer border like a manga page frame */
+    border: 5px solid #0a0a0a;
+    box-shadow: 8px 8px 0 #0a0a0a;
+}
+
+/* ─── Panel base ────────────────────────────────────────────── */
+.projects-panel {
+    position: relative;
+    min-height: 340px;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    background: #c8c4bb;
+
+    /* Inner borders — gutters between panels */
+    border: 3px solid #0a0a0a;
+
+    transition: filter 0.25s ease;
+}
+
+.projects-panel:hover {
+    filter: brightness(1.05);
+    z-index: 3;
+}
+
+/* ─── Panel images ──────────────────────────────────────────── */
+.panel-1 {
+    background-image:
+        linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.1) 55%, transparent 100%),
+        url("../../assets/images/facetracker.png");
+    background-size: cover;
+    background-position: center top;
+}
+.panel-2 {
+    background-image:
+        linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.1) 55%, transparent 100%),
+        url("../../assets/images/webshop.png");
+    background-size: cover;
+    background-position: center top;
+}
+.panel-3 {
+    background-image:
+        linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.1) 55%, transparent 100%),
+        url("../../assets/images/code.png");
+    background-size: cover;
+    background-position: center;
+}
+.panel-4 {
+    background-image:
+        linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.1) 55%, transparent 100%),
+        url("../../assets/images/elections.png");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Grayscale default → color on hover */
+.panel-1,
+.panel-2,
+.panel-3,
+.panel-4 {
+    filter: grayscale(85%) contrast(1.1);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.projects-panel:hover .panel-1,
+.projects-panel:hover .panel-2,
+.projects-panel:hover .panel-3,
+.projects-panel:hover .panel-4 {
+    filter: grayscale(0%) contrast(1);
+}
+
+/* Re-apply on the panel itself */
+.projects-panel:hover {
+    filter: grayscale(0%) contrast(1) brightness(1.05);
+}
+
+/* ─── Halftone inside panel ─────────────────────────────────── */
+.panel-halftone {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(245,240,232,0.08) 1px, transparent 1px);
+    background-size: 8px 8px;
+    z-index: 1;
+    pointer-events: none;
+    mix-blend-mode: screen;
+}
+
+/* ─── Speed lines (visible on hover) ───────────────────────── */
+.panel-lines {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.projects-panel:hover .panel-lines {
+    opacity: 1;
+}
+
+.pline {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(245,240,232,0.04) 40%,
+        rgba(245,240,232,0.2) 65%,
+        transparent 100%
+    );
+    transform-origin: left center;
+    transform: rotate(calc(var(--i) * 30deg)) translateY(-50%);
+}
+
+/* ─── Chapter badge ─────────────────────────────────────────── */
+.panel-chapter {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+    color: #f5f0e8;
+    background: #0a0a0a;
+    padding: 0.2rem 0.6rem;
+    z-index: 6;
+}
+
+/* ─── SFX text ──────────────────────────────────────────────── */
+.panel-sfx {
+    position: absolute;
+    top: 12%;
+    right: 8%;
+    font-family: 'Bangers', cursive;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    color: #f5f0e8;
+    opacity: 0;
+    letter-spacing: 4px;
+    transform: rotate(6deg) scale(0.8);
+    z-index: 6;
+    pointer-events: none;
+    user-select: none;
+    transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+    text-shadow:
+        3px 3px 0 #d62828,
+        4px 4px 0 #0a0a0a;
+}
+
+.projects-panel:hover .panel-sfx {
+    opacity: 1;
+    transform: rotate(6deg) scale(1);
+}
+
+/* ─── Panel content ─────────────────────────────────────────── */
+.panel-content {
+    position: relative;
+    z-index: 5;
+    padding: 1.4rem 1.6rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.panel-desc {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #d62828;
+    margin: 0;
+}
+
+.panel-title {
+    font-family: 'Bangers', cursive;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #f5f0e8;
+    margin: 0;
+    line-height: 1;
+    text-shadow: 3px 3px 0 #0a0a0a;
+}
+
+.panel-cta {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #f5f0e8;
+    opacity: 0;
+    transform: translateX(-8px);
+    transition: opacity 0.2s ease 0.05s, transform 0.2s ease 0.05s;
+    display: inline-block;
+    margin-top: 0.4rem;
+}
+
+.projects-panel:hover .panel-cta {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ─── Bottom accent bar ─────────────────────────────────────── */
+.panel-border-accent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #d62828;
+    z-index: 7;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.projects-panel:hover .panel-border-accent {
+    transform: scaleX(1);
+}
+
+/* ─── Responsive ────────────────────────────────────────────── */
+@media (max-width: 640px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-panel {
+        min-height: 260px;
+    }
+}

@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Oswald:wght@400;700&family=Share+Tech+Mono&display=swap');
+
+/* ─── Section ───────────────────────────────────────────────── */
+.about {
+    min-height: 100vh;
+    background: #0a0a0a;
+    color: #f5f0e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7rem 2rem;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Halftone */
+.about-halftone {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(245,240,232,0.06) 1px, transparent 1px);
+    background-size: 14px 14px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Corner brackets */
+.corner {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    z-index: 10;
+    pointer-events: none;
+}
+.corner-tl { top: 22px; left: 22px; border-top: 4px solid #d62828; border-left: 4px solid #d62828; }
+.corner-tr { top: 22px; right: 22px; border-top: 4px solid #d62828; border-right: 4px solid #d62828; }
+.corner-bl { bottom: 22px; left: 22px; border-bottom: 4px solid #d62828; border-left: 4px solid #d62828; }
+.corner-br { bottom: 22px; right: 22px; border-bottom: 4px solid #d62828; border-right: 4px solid #d62828; }
+
+/* SFX */
+.about-sfx {
+    position: absolute;
+    top: 8%;
+    right: 3%;
+    font-family: 'Bangers', cursive;
+    font-size: clamp(3.5rem, 7vw, 6rem);
+    color: #d62828;
+    opacity: 0.08;
+    letter-spacing: 4px;
+    transform: rotate(-8deg);
+    z-index: 1;
+    pointer-events: none;
+    user-select: none;
+    text-shadow: 3px 3px 0 #f5f0e8;
+}
+
+/* ─── Inner layout ──────────────────────────────────────────── */
+.about-inner {
+    max-width: 1300px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+}
+
+/* ─── Left ──────────────────────────────────────────────────── */
+.about-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.about-chapter-label {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 6px;
+    color: #f5f0e8;
+    background: #d62828;
+    padding: 0.25rem 1rem;
+    margin-bottom: 1.4rem;
+    display: inline-block;
+    clip-path: polygon(0 0, 100% 0, 96% 100%, 0 100%);
+}
+
+.about-tag {
+    font-family: 'Share Tech Mono', monospace;
+    color: #d62828;
+    letter-spacing: 6px;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.about-title {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    line-height: 0.9;
+    margin-bottom: 1.8rem;
+}
+
+.title-black,
+.title-red,
+.title-outline {
+    font-family: 'Bangers', cursive;
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    display: block;
+}
+
+.title-black {
+    color: #f5f0e8;
+    text-shadow: 4px 4px 0 #0a0a0a, 5px 5px 0 #333;
+}
+
+.title-red {
+    color: #d62828;
+    text-shadow: 4px 4px 0 #0a0a0a;
+}
+
+.title-outline {
+    color: transparent;
+    -webkit-text-stroke: 2px #f5f0e8;
+    text-shadow: none;
+}
+
+.about-rule {
+    width: 80px;
+    height: 4px;
+    background: #d62828;
+    margin-bottom: 1.8rem;
+    position: relative;
+}
+
+.about-rule::after {
+    content: '';
+    position: absolute;
+    left: 88px;
+    top: 0;
+    width: 200px;
+    height: 4px;
+    background: #222;
+}
+
+.about-description {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.82rem;
+    line-height: 1.9;
+    color: #9d9d9d;
+    margin-bottom: 1.2rem;
+    max-width: 520px;
+}
+
+.about-description em {
+    color: #f5f0e8;
+    font-style: normal;
+}
+
+/* ─── Traits ────────────────────────────────────────────────── */
+.about-traits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+
+.trait {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #f5f0e8;
+    border: 2px solid #333;
+    padding: 0.35rem 0.8rem;
+    position: relative;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.trait::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #d62828;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease;
+    z-index: -1;
+}
+
+.trait:hover::before { transform: scaleX(1); }
+.trait:hover { border-color: #d62828; }
+
+/* ─── Right — stat panel ────────────────────────────────────── */
+.about-right {
+    display: flex;
+    justify-content: center;
+}
+
+.stat-panel {
+    background: #f5f0e8;
+    color: #0a0a0a;
+    border: 4px solid #0a0a0a;
+    box-shadow: 10px 10px 0 #d62828, 12px 12px 0 #0a0a0a;
+    padding: 2.5rem 2.5rem;
+    width: 100%;
+    max-width: 420px;
+    position: relative;
+}
+
+.stat-panel::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px solid #0a0a0a;
+    z-index: -2;
+    pointer-events: none;
+}
+
+.stat-panel-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid #0a0a0a;
+    padding-bottom: 1rem;
+}
+
+.stat-panel-title {
+    font-family: 'Bangers', cursive;
+    font-size: 1.5rem;
+    letter-spacing: 6px;
+    color: #0a0a0a;
+}
+
+/* ─── Skill bars ────────────────────────────────────────────── */
+.skill-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    margin-bottom: 1.8rem;
+}
+
+.skill-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.skill-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.skill-name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.skill-val {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.65rem;
+    color: #d62828;
+}
+
+.skill-track {
+    width: 100%;
+    height: 10px;
+    background: #ccc;
+    border: 2px solid #0a0a0a;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-fill {
+    height: 100%;
+    width: var(--fill);
+    background: #0a0a0a;
+    position: relative;
+    animation: fillBar 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-delay: 0.3s;
+}
+
+/* Red notch at the end of the bar */
+.skill-fill::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    background: #d62828;
+}
+
+@keyframes fillBar {
+    from { width: 0; }
+    to { width: var(--fill); }
+}
+
+/* ─── Stat grid ─────────────────────────────────────────────── */
+.stat-divider {
+    height: 3px;
+    background: #0a0a0a;
+    margin-bottom: 1.8rem;
+    position: relative;
+}
+
+.stat-divider::after {
+    content: '★';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #f5f0e8;
+    padding: 0 6px;
+    font-size: 0.7rem;
+    color: #d62828;
+}
+
+.stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: #0a0a0a;
+    border: 3px solid #0a0a0a;
+    margin-bottom: 1.8rem;
+}
+
+.stat-item {
+    background: #f5f0e8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem 0.5rem;
+    gap: 0.3rem;
+    transition: background 0.2s ease;
+}
+
+.stat-item:hover {
+    background: #0a0a0a;
+}
+
+.stat-item:hover .stat-num,
+.stat-item:hover .stat-label {
+    color: #f5f0e8;
+}
+
+.stat-num {
+    font-family: 'Bangers', cursive;
+    font-size: 2.4rem;
+    letter-spacing: 2px;
+    color: #d62828;
+    line-height: 1;
+    transition: color 0.2s ease;
+}
+
+.stat-label {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #555;
+    text-align: center;
+    transition: color 0.2s ease;
+}
+
+/* ─── Footer ────────────────────────────────────────────────── */
+.stat-panel-footer {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #555;
+    border-top: 2px solid #0a0a0a;
+    padding-top: 1rem;
+}
+
+.status-active {
+    color: #d62828;
+    font-weight: bold;
+}
+
+/* ─── Responsive ────────────────────────────────────────────── */
+@media (max-width: 860px) {
+    .about-inner {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .about-right {
+        order: -1;
+    }
+}
